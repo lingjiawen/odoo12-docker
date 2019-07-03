@@ -1,7 +1,7 @@
 HOW TO USE IT?
 ============== 
 created by misterling 
-### 1、Install docker and run
+### 1、Install docker、docker-compose and run
   
 ### 2、Build image for project
 docker build -t core-12:12.0.1 .  
