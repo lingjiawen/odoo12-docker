@@ -1,0 +1,26 @@
+version: '2'
+services:
+    app:
+        image: odoo12:12.0.1
+        container_name: core-12_app
+        restart: always
+        tty: true
+        environment:
+            - ARG_EXT=
+        ports:
+            - "8123:8069"
+        volumes:
+            - odoo_volume:/odoo
+            - core-12_volume_app:/app
+            - core-12_volume_data:/data
+            - core-12_volume_log:/log
+        network_mode: bridge
+volumes:
+        odoo_volume:
+                external: true
+        core-12_volume_app:
+                external: true
+        core-12_volume_data:
+                external: true
+        core-12_volume_log:
+                external: true
